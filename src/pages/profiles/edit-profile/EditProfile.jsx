@@ -62,6 +62,7 @@ const EditProfile = (props) => {
         dispatch(getCurrentUser());
         dispatch(getCurrentProfile());
         getProfileData(profile);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const toggleShowSocialLinks = () => {

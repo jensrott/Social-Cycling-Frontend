@@ -17,6 +17,8 @@ const Login = (props) => {
 
     const [errors, setErrors] = useState({});
 
+    console.log(errors);
+    
     const dispatch = useDispatch();
 
     const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
@@ -26,6 +28,7 @@ const Login = (props) => {
         if (isAuthenticated) {
             props.history.push('/dashboard');
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const onSubmit = (e) => {

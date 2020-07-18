@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
-import { GoogleMap, withGoogleMap, DirectionsRenderer, Marker } from 'react-google-maps';
+import { GoogleMap, withGoogleMap, DirectionsRenderer } from 'react-google-maps';
 
 import ReactTooltip from 'react-tooltip';
 
@@ -24,6 +24,7 @@ const Map = ({ origin, destination }) => {
                 console.error(`error fetching directions ${result}`);
             }
         })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const MapComponent = withGoogleMap((props) =>

@@ -40,6 +40,7 @@ const ProfileDetail = (props) => {
         dispatch(getProfileById(profileId));
         dispatch(getPostsFromProfileById(profileId));
         console.log(profile);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (
@@ -94,19 +95,19 @@ const ProfileDetail = (props) => {
                         {profile.social ? (
                             <div className="profile-detail__social-container">
                                {profile.social.youtube ? (
-                                    <a href={`https://youtube.com/user/${profile.social.youtube}`} target="_blank">
+                                    <a href={`https://youtube.com/user/${profile.social.youtube}`} target="_blank" rel="noopener noreferrer">
                                         <i className="fab fa-youtube youtube-icon"></i>
                                    </a>
                                    ) : null}
                                {profile.social.twitter ? (
                                
-                                   <a href={`https://twitter.com/${profile.social.twitter}`} target="_blank">
+                                   <a href={`https://twitter.com/${profile.social.twitter}`} target="_blank" rel="noopener noreferrer">
                                         <i className="fab fa-twitter twitter-icon"></i>
                                    </a>
                                ) : null}
                                {profile.social.instagram ? (
                                     
-                                    <a href={`https://www.instagram.com/${profile.social.instagram}`} target="_blank">
+                                    <a href={`https://www.instagram.com/${profile.social.instagram}`} target="_blank" rel="noopener noreferrer">
                                         <i className="fab fa-instagram instagram-icon"></i>
                                     </a>
                                 ) : null}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-import { deleteComment, getProfileForProfilePicture } from '../../redux/actions/postActions';
+import { deleteComment } from '../../redux/actions/postActions';
 import { useSelector, useDispatch } from 'react-redux';
 import { Modal } from '@material-ui/core';
 import Moment from 'react-moment';
@@ -35,6 +35,7 @@ const Comment = ({ comment, postId }) => {
 
     useEffect(() => {
         console.log(comment);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
 

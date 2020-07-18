@@ -33,6 +33,7 @@ const Register = (props) => {
         if (isAuthenticated) {
             props.history.push('/dashboard');
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const onSubmit = (e) => {

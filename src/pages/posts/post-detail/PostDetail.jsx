@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getPost, getProfileForPost, deletePost, likePost, unlikePost } from '../../../redux/actions/postActions';
 import { Link } from 'react-router-dom';
-import classnames from 'classnames';
 
 import Modal from '@material-ui/core/Modal';
 
@@ -103,14 +102,8 @@ const PostDetail = (props) => {
         window.addEventListener('scroll', () => {
             setShowScrollButton(true);
         })
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
-
-    useEffect(() => {
-        console.log(props);
-        // findUserLikes(post.likes);
-
-    }, [props.post])
 
     return (
         <div className="post-detail">

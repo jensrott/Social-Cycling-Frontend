@@ -13,7 +13,6 @@ import { getPosts } from '../../redux/actions/postActions';
 import LandingPosts from './LandingPosts';
 
 import './landing.scss';
-import Map from '../map/Map';
 
 const Landing = () => {
     const posts = useSelector(state => state.post.posts);
@@ -34,6 +33,7 @@ const Landing = () => {
 
     useEffect(() => {
         dispatch(getPosts());
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (

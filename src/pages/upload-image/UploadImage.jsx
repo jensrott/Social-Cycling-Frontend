@@ -34,7 +34,8 @@ const UploadImage = (props) => {
 
     useEffect(() => {
         dispatch(getCurrentProfile());
-        setProfilePicture(user.profilePicture)
+        setProfilePicture(user.profilePicture);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (

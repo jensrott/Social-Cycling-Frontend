@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { logoutUser } from '../../redux/actions/authActions';
-import { getCurrentUser, deleteAccount, getCurrentProfile } from '../../redux/actions/profileActions';
+import { deleteAccount, getCurrentProfile } from '../../redux/actions/profileActions';
 import { toggleDarkmode } from '../../redux/actions/darkmodeActions';
 
 import { Link } from 'react-router-dom';
@@ -22,6 +22,7 @@ const Dashboard = (props) => {
 
     useEffect(() => {
         dispatch(getCurrentProfile());
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const removeDarkTheme = () => {

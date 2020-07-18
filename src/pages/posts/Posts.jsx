@@ -29,6 +29,7 @@ const Posts = (props) => {
         window.addEventListener('scroll', () => {
             setShowScrollButton(true);
         })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (

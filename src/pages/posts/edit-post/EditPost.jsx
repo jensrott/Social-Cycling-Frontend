@@ -49,6 +49,7 @@ const EditPost = (props) => {
     useEffect(() => {
         getPost(postId);
         getPostData(post);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const onSubmit = (e) => {

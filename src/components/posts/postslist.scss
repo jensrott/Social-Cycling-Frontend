@@ -1,0 +1,18 @@
+.posts-list {
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        flex-wrap: wrap;
+
+        @media only screen and (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.no-posts {
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    margin-top: 10%;
+}

@@ -1,0 +1,19 @@
+.scroll-top {
+    position: fixed;
+    bottom: 7.5%;
+    right: 5%;
+    
+    button {
+        background-color: #fff;
+        transition: all 300ms ease-in-out;
+        width: 50px;
+        cursor: pointer;
+        height: 50px;
+        border: none;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 8, 0.08) 0px 4px 8px 0px;
+        i {
+            color: #000;
+        }
+    }
+}

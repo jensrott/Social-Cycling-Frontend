@@ -1,0 +1,132 @@
+$red: #F6504C;
+$red-hover: #d44442;
+
+.comment {
+    &__card {
+        border-radius: 0.3rem;
+        width: 450px;
+        background-color: #ffffff;
+        box-shadow: rgba(0, 0, 8, 0.08) 0px 4px 8px 0px;
+        padding: 1rem 1.5rem;
+        animation: fade 500ms ease-in-out;
+        margin-bottom: 3%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        @media only screen and (max-width: 768px) {
+          flex-wrap: wrap;
+          width: 295px; 
+        }
+        
+        div {
+
+            i {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__image {
+        img {
+            cursor: pointer;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+
+    &__text {
+      p {
+        overflow-wrap: break-word;
+        max-width: 250px;
+      }
+    }
+
+    &__modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        color: #000;
+        padding: 1rem;
+        width: 385px;
+        background-color: #fff;
+        border: none;
+        outline: none;
+        box-shadow: rgba(0, 0, 8, 0.08) 0px 4px 8px 0px;
+        border-radius: 0.3rem;
+        animation: fade-1 500ms ease-in-out;
+
+        @media only screen and (max-width: 768px) {
+          width: 250px
+        }
+  
+        .modal-wrapper {
+          h1 {
+            font-size: 1.3rem;
+          }
+  
+          p {
+            margin-bottom: 1rem;
+            font-size: 0.8rem;
+          }
+  
+          .buttons-container {
+            display: flex;
+            justify-content: flex-end;
+            .delete-button {
+              text-decoration: none;
+              padding: 0.7rem 1.5rem;
+              cursor: pointer;
+              line-height: 1;
+              border: none;
+              border-radius: 0.3rem;
+              color: #fff;
+              background-color: $red;
+              transition: background-color 300ms ease-in-out;
+              font-weight: bold;
+  
+              &:hover {
+                background-color: $red-hover;
+              }
+            }
+  
+            .cancel-button {
+              text-decoration: none;
+              padding: 0.7rem 1.5rem;
+              margin-left: 0.7rem;
+              cursor: pointer;
+              line-height: 1;
+              border: none;
+              border-radius: 0.3rem;
+              color: #000;
+              background-color: #fff;
+              font-weight: bold;
+              transition: background-color 300ms ease-in-out;
+  
+              &:hover {
+                background-color: #D7DADC;
+              }
+            }
+          }
+  
+        }
+      }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }

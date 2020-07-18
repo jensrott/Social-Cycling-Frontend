@@ -1,0 +1,117 @@
+.edit-post {
+  margin: 0 18%;
+  animation: fade 500ms ease-in-out;
+
+    &__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 10%;
+
+      @media only screen and (max-width: 768px) {
+        margin: 0 10%; 
+      }
+  }
+
+  &__card {
+    border-radius: 0.3rem;
+    width: 450px;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 8, 0.08) 0px 4px 8px 0px;
+    padding: 1rem 1.5rem;
+
+    @media only screen and (max-width: 768px) {
+      width: 295px; 
+    }
+  }
+
+  &__main-title {
+    text-align: center;
+    margin: 1rem 0;
+    color: #555555;
+  }
+
+    &__back-button-container {
+      margin: 5% 0;
+      .back-button {
+          padding: 0.7rem 1.5rem;
+          cursor: pointer;
+          line-height: 1;
+          border: none;
+          border-radius: 0.5rem;
+          color: #fff;
+          background-color: #eb8555;
+          font-weight: bold;
+          transition: all 300ms ease-in-out;
+
+          &:hover {
+              transform: scale(1.035);
+          }
+        }
+    }
+
+    
+    form {
+      .form-field {
+        input, textarea {
+          border: 0.0625em solid #e5e5e5;
+          background-color: #f6f6f6;
+          border-radius: 0.5rem;
+          width: 100%;
+          color: #555555;
+          padding: 10px;
+        }
+
+        textarea { 
+          resize: none;
+          display: inherit;
+          font-family: "Hind", sans-serif;
+        }
+
+        small {
+          display: inline-block;
+          margin-bottom: 15px;
+          margin-top: 10px;
+          margin-left: 0.7rem;
+        }
+      }
+
+      .question-container {
+        position: relative;
+        display: inline-block;
+
+        i {
+          position: absolute;
+          top: 14%;
+          right: 3%;
+          color: #555555;
+        }
+      }
+    }
+
+    &__button-container {
+      input {
+        border: none;
+        border-radius: 0.3rem;
+        width: 100%;
+        padding: 10px;
+        margin: 0.5rem 0;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        color: #ffffff;
+        cursor: pointer;
+        background-color: #eb8555;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: transform 100ms ease-in-out;
+
+      &:hover {
+        transform: scale(1.01);
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+}

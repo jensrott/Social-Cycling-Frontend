@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css?family=Hind:400,700&display=swap");
+
+$bg-color-dark: #1A1A1B;
+$body-color-dark: #D7DADC;
+$color1-dark: #272729;
+$border-dark: #343536 1px solid;
+$white: #fff;
+$black: #000;
+$link: #4193c6;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Hind", sans-serif;
+  background-color: $white;
+  color: $black;
+  overflow-x: hidden;
+  transition: background-color 0.5s ease-in-out;
+}
+
+  .darkTheme {
+    body {
+      background-color: $bg-color-dark;
+      transition: background-color 0.5s ease-in-out;
+      color: $body-color-dark;
+      .header {
+        background-color: $color1-dark;
+
+        &__logo {
+          color: $body-color-dark;
+        }
+
+        nav {
+          ul {
+            li {
+              a {
+                color: $body-color-dark;
+              }
+            }
+          }
+        }
+      }
+
+      .mobile-header {
+        &__mobile-container {
+          background-color: $color1-dark;
+          border-bottom: $border-dark;
+
+          li {
+            a {
+              color: $white;
+            }
+          }
+        }
+      }
+      
+      .landing {
+        &__section-2,&__section-4 {
+          background-color: $color1-dark; 
+        }
+
+        &__section-4 {
+          .landing-what {
+            .landing-container {
+              .landing-text {
+                span {
+                  color: $white;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .errors {
+        background-color: $color1-dark;
+        border: $border-dark;
+
+        &__error {
+          color: #D7DADC
+        }
+      }
+
+      .dashboard,
+      .profile,
+      .profile-detail,
+      .post-detail,
+      .comment,
+      .comment-form,
+      .upload-image,
+      .create-post,
+      .edit-post
+      {
+        &__card {
+          background-color: $color1-dark;
+          border: $border-dark;
+        }
+      }
+      .top-bar {
+        &__right {
+          .filter-title-container {
+            background-color: $color1-dark;
+            border: $border-dark;
+          }
+
+          .filter-container {
+            background-color: $color1-dark;
+            border: $border-dark;
+          }
+        }
+      }
+
+      .posts-list,
+      .landing-posts,
+      .profile-posts {
+        &__container {
+          .post {
+            background-color: $color1-dark;
+            border: $border-dark;
+
+            &__text {
+              color: $white;
+            }
+
+            h1 {
+              color: $body-color-dark;
+            }
+
+            p {
+              color: $link;
+            }
+
+            time {
+              color: $white;
+            }
+          }
+        }
+      }
+
+      .comment,
+      .post-detail,
+      .dashboard, 
+      .comment-form {
+        &__modal {
+          background-color: $color1-dark;
+          border: $border-dark;
+          color: $white;
+
+          .buttons-container {
+            .cancel-button {
+              background-color: $color1-dark;
+              color: $white;
+
+              &:hover {
+                color: $color1-dark;
+              }
+            }
+          }
+        }
+      }
+
+      .scroll-top {
+        button {
+          background-color: $color1-dark;
+          border: $border-dark;
+          i {
+            color: $white;
+          }
+        }
+      }
+
+      .footer {
+        background-color: $bg-color-dark;
+        border-top: $border-dark;
+      }
+
+      .create-profile,
+      .edit-profile,
+      .create-post,
+      .edit-post {
+        &__card {
+          background-color: $color1-dark;
+          border: $border-dark;
+        }
+
+        &__main-title {
+          color: $body-color-dark;
+        }
+      }
+    }
+  }
+
+input, textarea, button {
+  outline: none;
+}

@@ -14,6 +14,9 @@ const Errors = ({ errors }) => {
                     {errors.startLocation ? (<p className="errors__error"> {errors.startLocation} </p>) : ""}
                     {errors.endLocation ? (<p className="errors__error"> {errors.endLocation} </p>) : ""}
                     {errors.wrongFormat ? (<p className="errors__error"> {errors.wrongFormat} </p>) : ""}
+                    {errors.youtube ? (<p className="errors__error"> {errors.youtube} </p>) : ""}
+                    {errors.instagram ? (<p className="errors__error"> {errors.instagram} </p>) : ""}
+                    {errors.twitter ? (<p className="errors__error"> {errors.twitter} </p>) : ""}
                 </div>
             </div >
             : null

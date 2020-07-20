@@ -30,7 +30,10 @@ const EditProfile = (props) => {
 
     const errors = {
         username: useSelector(state => state.errors.username),
-        level: useSelector(state => state.errors.level)
+        level: useSelector(state => state.errors.level),
+        youtube: useSelector(state => state.errors.youtube),
+        instagram: useSelector(state => state.errors.instagram),
+        twitter: useSelector(state => state.errors.twitter),
     }
 
     console.log(useSelector(state => state.errors));
@@ -122,7 +125,7 @@ const EditProfile = (props) => {
                 <button onClick={goBack} className="back-button">Go back</button>
             </div>
             <div className="edit-profile__container">
-                {errors.username || errors.level ? <Errors errors={errors} /> : null}
+                {errors.username || errors.level || errors.youtube || errors.instagram || errors.twitter ? <Errors errors={errors} /> : null}
                 <div className="edit-profile__card">
                     <h1 className="edit-profile__main-title">Edit your profile</h1>
                     <form noValidate="novalidate" onSubmit={e => onSubmit(e)}>
@@ -145,8 +148,6 @@ const EditProfile = (props) => {
                                     </option>
                                 )}
                             </select>
-                            <i data-tip="Choose your skill level!" className="fas fa-sort-down"></i>
-
                             <small>What is your skill level? (required)</small>
                         </div>
 
@@ -228,7 +229,7 @@ const EditProfile = (props) => {
 
 
                         <div className="create-profile__button-container">
-                            <input type="submit" value="Edit Profile" disabled={disabled} />
+                            <input type="submit" value="Save" disabled={disabled} />
                         </div>
                     </form>
                 </div>

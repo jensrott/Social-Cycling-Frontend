@@ -28,7 +28,10 @@ const CreateProfile = (props) => {
 
     const errors = {
         username: useSelector(state => state.errors.username),
-        level: useSelector(state => state.errors.level)
+        level: useSelector(state => state.errors.level),
+        youtube: useSelector(state => state.errors.youtube),
+        instagram: useSelector(state => state.errors.instagram),
+        twitter: useSelector(state => state.errors.twitter),
     }
 
     const toggleShowSocialLinks = () => {
@@ -89,7 +92,7 @@ const CreateProfile = (props) => {
                 <button onClick={goBack} className="back-button">Go back</button>
             </div>
             <div className="create-profile__container">
-                {errors.username || errors.level ? <Errors errors={errors} /> : null}
+                {errors.username || errors.level || errors.youtube || errors.instagram || errors.twitter ? <Errors errors={errors} /> : null}
                 <div className="create-profile__card">
                     <h1 className="create-profile__main-title">Create your profile</h1>
                     <form noValidate="novalidate" onSubmit={e => onSubmit(e)}>
@@ -113,8 +116,6 @@ const CreateProfile = (props) => {
                                     </option>
                                 )}
                             </select>
-                            <i data-tip="Choose your skill level!" className="fas fa-sort-down"></i>
-
                             <small>What is your skill level? (required)</small>
                         </div>
 
@@ -197,7 +198,7 @@ const CreateProfile = (props) => {
                         <div className="create-profile__button-container">
                             <input
                                 type="submit"
-                                value="Create Profile"
+                                value="Create"
                                 disabled={disabled}
                             />
                         </div>

@@ -11,6 +11,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getPosts } from '../../redux/actions/postActions';
 
 import LandingPosts from './LandingPosts';
+import ReactTooltip from 'react-tooltip';
 
 import './landing.scss';
 
@@ -48,7 +49,8 @@ const Landing = () => {
                         <Link to="/register">Join</Link>
                     </div>
                     <div>
-                        <img onClick={scrollBottom} src={bike} alt="bike-logo" />
+                        <img data-tip="Click!" onClick={scrollBottom} src={bike} alt="bike-logo" />
+                        <ReactTooltip />
                     </div>
                 </div>
             </section>

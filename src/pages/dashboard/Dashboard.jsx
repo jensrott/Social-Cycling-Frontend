@@ -87,7 +87,7 @@ const Dashboard = (props) => {
                     <div>
                         <div className="dashboard__buttons-container">
                             <Link to="/edit-profile">Edit Profile</Link>
-                            <Link to="/profiles">Profiles</Link>
+                            <Link to="/profiles">All Profiles</Link>
                             <Link to="/create-posts">Create Groupride</Link>
                         </div>
                         <div className="dashboard__card main">
@@ -134,7 +134,7 @@ const Dashboard = (props) => {
                 <div className="dashboard__card">
                     <div className="dashboard__toggle-container">
                         <div style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
-                            <p className="dashboard__theme-text" style={{ marginRight: "1rem" }}> Choose theme:</p>
+                            <p className="dashboard__theme-text" onClick={toggleTheme} style={{ marginRight: "1rem" }}> Choose theme:</p>
                             <i data-tip="Change theme" style={{ cursor: "pointer" }} onClick={toggleTheme} className="far fa-moon"></i>
                         </div>
                     </div>

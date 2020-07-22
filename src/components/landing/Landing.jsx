@@ -75,7 +75,7 @@ const Landing = () => {
 
             <section className="landing__section-3">
                 <div className="landing-latest">
-                    <Link className="landing-title" to="/posts">Latest Group Rides</Link>
+                    <Link className="landing-title" id="latest-title" to="/posts">Latest Group Rides</Link>
                     <div className="landing-grouprides">
                         <LandingPosts posts={lessPosts} />
                     </div>

@@ -63,6 +63,14 @@ body {
           background-color: $color1-dark; 
         }
 
+        &__section-3 {
+          .landing-latest {
+            #latest-title {
+              color: $body-color-dark;
+            }
+          }
+        }
+
         &__section-4 {
           .landing-what {
             .landing-container {

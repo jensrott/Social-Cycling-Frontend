@@ -105,7 +105,6 @@
     &__section-3 {
         padding: 5% 17% 5% 17%;
         .landing-latest {
-            
             .landing-title {
                 text-align: left;
                 margin-bottom: 5%;
@@ -114,6 +113,10 @@
                 padding: 0;
                 text-decoration: none;
                 color: #fff;
+            }
+
+            #latest-title {
+                color: #000;
             }
 
             .landing-grouprides {

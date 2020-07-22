@@ -90,9 +90,21 @@ $red-hover: #d44442;
         // margin: 3% 0;
         margin-top: 5%;
 
-        i {
-          cursor: pointer;
+        div {
+          button {
+            background-color: #D7DADC;
+            border: none;
+            border-radius: 0.2rem;
+            padding: 0.3rem;
+            margin-left: 1rem;
+            cursor: pointer;
+            i {
+              color: #1A1A1B;
+            }
+          }
         }
+
+        
       }
     }
     
@@ -167,6 +179,16 @@ $red-hover: #d44442;
 
       }
     }
+}
+
+.disabled {
+  opacity: .8;
+  cursor: no-drop !important;
+  filter: contrast(.66);
+  
+  &:hover {
+      transform: initial;
+  }
 }
 
 @keyframes fade-1 {

@@ -68,7 +68,7 @@ const CreatePost = (props) => {
             <div className="create-post__container">
                 {errors.title || errors.startLocation || errors.endLocation || errors.wrongFormat ? <Errors errors={errors} /> : null}
                 <div className="create-post__card">
-                    <h1 className="create-post__main-title">Create Groupride</h1>
+                    <h1 className="create-post__main-title">Create Group Ride</h1>
                     <form noValidate="novalidate" className="create-post__form" onSubmit={e => onSubmit(e)}>
                         <div className="form-field">
                             <input
@@ -119,7 +119,7 @@ const CreatePost = (props) => {
                         <div className="create-post__button-container">
                             <input
                                 type="submit"
-                                value="Create Post" />
+                                value="Create" />
                         </div>
                     </form>
                 </div>

@@ -131,7 +131,7 @@ const EditPost = (props) => {
                         </div>
                         <ReactTooltip />
                         <div className="edit-post__button-container">
-                            <input type="submit" value="Edit Post" />
+                            <input type="submit" value="Save" />
                         </div>
                     </form>
                 </div>

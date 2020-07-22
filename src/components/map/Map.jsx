@@ -12,6 +12,7 @@ const Map = ({ origin, destination }) => {
     const [directions, setDirections] = useState(null);
 
     useEffect(() => {
+        console.log(origin, destination)
         const DirectionsService = new window.google.maps.DirectionsService();
         DirectionsService.route({
             origin: { lat: origin.lat, lng: origin.lng },

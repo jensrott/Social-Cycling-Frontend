@@ -77,7 +77,7 @@ const CommentForm = ({ postId }) => {
                             <textarea
                                 required={true}
                                 name="comment"
-                                placeholder="Comment Text"
+                                placeholder="e.g. I will be there!"
                                 cols="54"
                                 rows="4"
                                 onChange={e => handleChange(e)}

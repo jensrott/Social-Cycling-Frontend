@@ -88,7 +88,7 @@ const Dashboard = (props) => {
                         <div className="dashboard__buttons-container">
                             <Link to="/edit-profile">Edit Profile</Link>
                             <Link to="/profiles">All Profiles</Link>
-                            <Link to="/create-posts">Create Groupride</Link>
+                            <Link to="/create-posts">Create Group Ride</Link>
                         </div>
                         <div className="dashboard__card main">
                             <div>

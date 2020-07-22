@@ -13,6 +13,8 @@ import ScrollTop from '../../../components/common/scrolltop/ScrollTop';
 import ReactTooltip from "react-tooltip";
 import Map from '../../../components/map/Map';
 
+import classnames from 'classnames';
+
 import './postdetail.scss';
 
 const PostDetail = (props) => {
@@ -20,7 +22,6 @@ const PostDetail = (props) => {
     const dispatch = useDispatch();
 
     const [open, setOpen] = useState(false);
-    const [likesStatus, setLikesStatus] = useState();
 
     const post = useSelector(state => state.post.post);
     const profilePost = useSelector(state => state.post.profilePost);
@@ -33,47 +34,30 @@ const PostDetail = (props) => {
 
     const onLikePost = (id) => {
         dispatch(likePost(id));
-        setLikesStatus(true);
     }
 
     const onUnLikePost = (id) => {
         dispatch(unlikePost(id));
-        setLikesStatus(false);
     }
 
-    // We can not add the same like twice
-    const handleLike = () => {
-        if (!likesStatus) { // false
-            onLikePost(post._id)
-        } else { // true
-            onUnLikePost(post._id)
-        }
-        console.log(likesStatus)
-        console.log(post);
+    const handleLikePost = () => {
+        onLikePost(post._id);
+    }
+
+    const handleDislikePost = () => {
+        onUnLikePost(post._id)
     }
 
     // Check if user has already liked the post
-    // TODO: fix this
     const findUserLikes = (likes) => {
         if (likes) {
             if (likes.filter(like => like.user === userId).length > 0) {
-                return setLikesStatus(true);
+                return true
             } else {
-                return setLikesStatus(false);
+                return false
             }
         }
     }
-
-    const handleLikesUser = () => {
-        findUserLikes(post.likes);
-        console.log(post.likes);
-        console.log('woopie');
-        console.log(likesStatus);
-    }
-
-
-    // console.log(post.likes);
-
 
     const removePost = () => {
         console.log("delete post");
@@ -89,27 +73,23 @@ const PostDetail = (props) => {
     }
 
     useEffect(() => {
-        handleLikesUser();
-
-        // console.log("userId", userId);
-        // post.likes ? findUserLikes(post.likes) : null;
-        // console.log(post.likes);
-        // console.log(post);
-
-        // findUserLikes(post.likes);
         dispatch(getPost(postId));
         dispatch(getProfileForPost(postId));
         window.addEventListener('scroll', () => {
             setShowScrollButton(true);
         })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
+
+    useEffect(() => {
+
+    }, [props])
 
     return (
         <div className="post-detail">
             <div className="post-detail__back-button-container">
                 <Link className="back-button" to="/posts">
-                    Posts
+                    Group Rides
                 </Link>
             </div>
             <div className="post-detail__container">
@@ -161,20 +141,19 @@ const PostDetail = (props) => {
 
                     <p> {post.description}</p>
 
-
                     <div className="like-container">
+
                         {post.likes ? post.likes.length : null}
-
-                        {!likesStatus ?
-                            (
-                                <i onClick={handleLike} className="far fa-heart" ></i>
-                            ) : (
-                                <i onClick={handleLike} className="fas fa-heart"></i>
-
-                            )}
-
-                        <button onClick={handleLikesUser}>Click</button>
-
+                        <div>
+                            <button disabled={findUserLikes(post.likes)} onClick={handleLikePost} className={classnames({
+                                "disabled": findUserLikes(post.likes)
+                            })} >
+                                <i className="fa fa-thumbs-up"></i>
+                            </button>
+                            <button onClick={handleDislikePost}>
+                                <i className="fa fa-thumbs-down"></i>
+                            </button>
+                        </div>
                     </div>
 
                     {profilePost ? (
@@ -193,36 +172,28 @@ const PostDetail = (props) => {
                             <ReactTooltip />
                         </React.Fragment>
                     ) : null}
-
-
-                    {/* {post.likes.filter(like => like.user === userId).length > 0 ? (<i className="fas fa-heart"></i>) : (<i className="far fa-heart" ></i>)} */}
-
-                    {/* TODO */}
-                    {/* {<i
-                    className={classnames('fas fa-thumbs-up', {
-                        'text-info': findUserLikes(post.likes)
-                    })}
-                />} */}
-
                 </div>
 
                 <CommentsList postId={postId} comments={comments} />
 
 
-                <div className="post-detail__card" style={{ padding: "0" }}>
-                    <Map
-                        origin={{ lat: post.start_lat, lng: post.start_lng }}
-                        destination={{ lat: post.stop_lat, lng: post.stop_lng }}
-                    />
-                </div>
-
+                {post.start_lat ? (
+                    <div className="post-detail__card" style={{ padding: "0" }}>
+                        <Map
+                            origin={{ lat: post.start_lat, lng: post.start_lng }}
+                            destination={{ lat: post.stop_lat, lng: post.stop_lng }}
+                        />
+                    </div>
+                ) : null}
 
                 <CommentForm postId={postId} />
 
             </div>
-            {showScrollButton ? (
-                <ScrollTop />
-            ) : null}
+            {
+                showScrollButton ? (
+                    <ScrollTop />
+                ) : null
+            }
         </div >
     )
 }

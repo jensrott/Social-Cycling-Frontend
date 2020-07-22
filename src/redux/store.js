@@ -13,7 +13,7 @@ const store = createStore(
         applyMiddleware(...middleware),
         // Comment this in production, uncomment if you use the redux devtool
         // (window.__REDUX_DEVTOOLS_EXTENSION__ &&
-            // (window.__REDUX_DEVTOOLS_EXTENSION__()))
-            ));
+        // (window.__REDUX_DEVTOOLS_EXTENSION__()))
+    ));
 
 export default store;

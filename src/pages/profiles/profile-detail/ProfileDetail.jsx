@@ -124,7 +124,7 @@ const ProfileDetail = (props) => {
                         </div>
                     ) : (
                         <div className="profile-detail__card">
-                            <p>{profile.user.name} didn't create any posts yet!</p>
+                            <p>{profile.user.name} didn't create any group rides yet!</p>
                         </div>
                     )}
 

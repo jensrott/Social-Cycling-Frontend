@@ -143,7 +143,8 @@ const PostDetail = (props) => {
 
                     <div className="like-container">
 
-                        {post.likes ? post.likes.length : null}
+                      <p data-tip="Attendees">{post.likes ? post.likes.length : null}</p>
+                      <ReactTooltip />
                         <div>
                             <button disabled={findUserLikes(post.likes)} onClick={handleLikePost} className={classnames({
                                 "disabled": findUserLikes(post.likes)

@@ -2,6 +2,11 @@
     animation: fade 500ms ease-in-out;
     margin: 0 18%;
 
+    @media only screen and (max-width: 768px) {
+        display: flex;
+        justify-content: center;
+    } 
+
     &__back-button-container {  
         margin: 5% 0;
         .back-button {
@@ -19,9 +24,6 @@
             transform: scale(1.035);
           }
         }
-        // @media only screen and (max-width: 768px) {
-        //   display: none;
-        // }
       }
 
     &__card {
@@ -127,6 +129,9 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        @media only screen and (max-width: 768px) {
+            font-size: 1.1rem;
+        }
     }
 
     .center-vertical {
@@ -142,6 +147,11 @@
         border-radius: 50%;
         width: 300px;
         height: 300px;
+
+        @media only screen and (max-width: 768px) {
+            width: 250px;
+            height: 250px;
+        }
     }
 }
 
@@ -151,6 +161,9 @@
 
 .paper-popover {
     background-color: transparent !important;
+    @media only screen and (max-width: 768px) {
+        left: 36px !important;
+    }
 }
 
 @keyframes fade {

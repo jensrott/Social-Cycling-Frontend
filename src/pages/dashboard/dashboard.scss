@@ -27,6 +27,11 @@ $red-hover: #d44442;
     &__main-title {
       font-size: 1.8rem;
       margin-bottom: 2rem;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+
       a {
         color: #551A8B;
         text-decoration: none;

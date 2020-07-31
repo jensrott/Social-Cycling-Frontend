@@ -25,7 +25,9 @@
                         @media only screen and (max-width: 768px) {
                             text-align: center;
                             font-size: 3rem;
-                            margin-right: initial;  
+                            margin-right: initial;
+                            line-height: 1.2;
+                            margin-bottom: 1.7rem;
                         }
                     }
 
@@ -41,6 +43,10 @@
                         font-weight: bold;
                         text-decoration: none;
                         transition: all 300ms ease-in-out;
+
+                        @media only screen and (max-width: 768px) {
+                            margin-left: 4%;
+                        }
                     }
                 }
                 
@@ -83,6 +89,10 @@
             font-size: 1.875em;
             font-weight: 400;
             padding: 0;
+            @media only screen and (max-width: 768px) {
+                text-align: center;
+                font-size: 1.6rem;
+            }
         }
         .landing-features {
             display: flex;
@@ -98,6 +108,11 @@
                     height: auto;
                     margin-bottom: 10%;
                 }
+
+                @media only screen and (max-width: 768px) {
+                    margin: 1.5rem 0;
+                }
+                
             }
         }
     }
@@ -113,10 +128,17 @@
                 padding: 0;
                 text-decoration: none;
                 color: #fff;
+                @media only screen and (max-width: 768px) {
+                    text-align: center;
+                    font-size: 1.6rem;
+                }
             }
 
             #latest-title {
                 color: #000;
+                @media only screen and (max-width: 768px) {
+                    font-size: 1.6rem;
+                }
             }
 
             .landing-grouprides {
@@ -157,6 +179,10 @@
                 font-weight: 400;
                 padding: 0;
                 text-decoration: none;
+                @media only screen and (max-width: 768px) {
+                    text-align: center;
+                    font-size: 1.6rem;
+                }
             }
 
             .landing-container {
@@ -199,7 +225,18 @@
                         font-weight: bold;
                         text-decoration: none;
                         transition: all 300ms ease-in-out;
+
+                        @media only screen and (max-width: 768px) {
+                            padding: 0.8rem 3.5rem;
+                        }
                         
+                    }
+
+                    .landing-button-container {
+                        @media only screen and (max-width: 768px) {
+                            display: flex;
+                            justify-content: center;
+                        }
                     }
                 }   
 

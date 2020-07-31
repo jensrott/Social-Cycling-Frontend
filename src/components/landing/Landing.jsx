@@ -88,7 +88,9 @@ const Landing = () => {
                         <div className="landing-text">
                             <p><span>Social Cycling</span> is a platform where cyclists of all levels can come together and organise group rides.</p>
                             <p>Cycling is fun, and it is more fun with friends!</p>
-                            <Link to="/register">Join</Link>
+                            <div className="landing-button-container">
+                                <Link to="/register">Join</Link>
+                            </div>
                         </div>
                         <div className="landing-image">
                             <img src={nature} alt="nature-img" />
@@ -97,7 +99,6 @@ const Landing = () => {
 
                 </div>
             </section>
-            {/* <Map /> */}
         </div>
 
 

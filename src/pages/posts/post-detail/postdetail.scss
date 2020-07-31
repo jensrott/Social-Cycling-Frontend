@@ -8,6 +8,12 @@ $red-hover: #d44442;
     &__back-button-container {
       margin: 5% 0;
 
+      @media only screen and (max-width: 768px) {
+        width: 100%;
+        margin: 1rem 0;
+        display: flex;
+      }
+
       .back-button {
         padding: 0.3rem 1.7rem;
         cursor: pointer;
@@ -23,9 +29,11 @@ $red-hover: #d44442;
             transform: scale(1.035);
         }
 
-        a {
-          
-        }
+          @media only screen and (max-width: 768px) {
+            width: 100%;
+            padding: 0.8rem 1.7rem;
+            text-align: center;
+          }
       }
     }
     &__container {
@@ -44,6 +52,10 @@ $red-hover: #d44442;
       display: flex;
       justify-content: space-between;
       margin-bottom: 2%;
+
+      @media only screen and (max-width: 768px) {
+        margin-bottom: 10%;
+      }
       
       .personal-button {
         padding: 0.7rem 1.5rem;

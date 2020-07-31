@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Post from '../posts/Post';
+import Spinner from '../common/spinner/Spinner';
 
 import './landingposts.scss';
 
@@ -19,7 +20,9 @@ const LandingPosts = ({ posts }) => {
                     </div>
                 </div>
             ) : (
-                    null
+                <div className="landing-post__loading-container">
+                    <Spinner />
+                </div>
                 )}
         </React.Fragment>
     )

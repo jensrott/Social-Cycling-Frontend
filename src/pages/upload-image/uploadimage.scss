@@ -11,11 +11,15 @@
   
         @media only screen and (max-width: 768px) {
           margin: 0 10%; 
+          height: initial;
         }
     }
 
     &__back-button-container {
       margin: 5% 0;
+      @media only screen and (max-width: 768px) {
+        width: 100%;
+      }
       .back-button {
           padding: 0.7rem 1.5rem;
           cursor: pointer;
@@ -29,6 +33,11 @@
 
           &:hover {
               transform: scale(1.035);
+          }
+
+          @media only screen and (max-width: 768px) {
+            width: 100%;
+            margin-top: 1rem;
           }
         }
     }

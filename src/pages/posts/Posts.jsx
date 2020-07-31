@@ -39,7 +39,7 @@ const Posts = (props) => {
                 <React.Fragment>
                     {isAuthenticated ? (
                         <React.Fragment>
-                            <Link to="/create-posts">
+                            <Link to="/create-posts" id="create-button">
                                 <button data-tip="Only you can see this button!" className="create-button"> Create Group Ride</button>
                             </Link>
                             <ReactTooltip />
